@@ -83,9 +83,11 @@ function resetScreen(){
 
 function backSpace(){
     let a = currentScreen.textContent;
+    let b = opSummary.textContent.length;
     currentScreen.textContent = a.substring(0, a.length-1);
     if(a.length === "")
         currentScreen.textContent = 0;
+    opSummary.textContent = opSummary.textContent.substring(0, b-1);
    
 }
 
